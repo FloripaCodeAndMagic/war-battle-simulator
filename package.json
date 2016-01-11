@@ -1,0 +1,24 @@
+{
+  "name": "war-battle-simulator",
+  "version": "0.0.0",
+  "description": "Simulate battles for the board game War. Tired of rolling dices all day? You came to the right place.",
+  "main": "",
+  "scripts": {
+    "test": "./node_modules/.bin/_mocha test/unit/**/*.test.js"
+  },
+  "keywords": [
+    "war",
+    "simulator",
+    "battle",
+    "board",
+    "game",
+    "dice"
+  ],
+  "author": "Lucas Vieira <vieiralucas4@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "sinon": "^1.17.2"
+  }
+}
