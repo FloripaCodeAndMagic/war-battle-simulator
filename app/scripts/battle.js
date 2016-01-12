@@ -33,4 +33,12 @@ Battle.prototype.battle = function() {
     }
 };
 
+Battle.prototype.toString = function() {
+    return `Attack roll: [${this.attackRoll}]\t` +
+        `Defense roll: [${this.defenseRoll}]\n` +
+        `Attack loss: ${this.attackLoss}\t\t` +
+        `Defense loss: ${this.defenseLoss}\n` +
+        `------------------------------------------`;
+}
+
 module.exports = Battle;

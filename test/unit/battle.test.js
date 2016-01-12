@@ -143,4 +143,17 @@ describe('Battle', () => {
             battle.defenseLoss.should.be.eql(0);
         });
     });
+
+    describe('.toString', () => {
+        it('should transform battle into a beautiful string', () => {
+            const battle = new Battle([4, 3, 1], [3, 2, 1]);
+
+            battle.battle();
+            battle.toString().should.be.eql(
+                'Attack roll: [4,3,1]\tDefense roll: [3,2,1]\n' +
+                'Attack loss: 1\t\tDefense loss: 2\n' +
+                '------------------------------------------'
+            );
+        });
+    });
 });
