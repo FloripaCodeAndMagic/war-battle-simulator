@@ -4,7 +4,7 @@
   "description": "Simulate battles for the board game War. Tired of rolling dices all day? You came to the right place.",
   "main": "",
   "scripts": {
-    "test": "./node_modules/.bin/_mocha test/unit/**/*.test.js"
+    "test": "./node_modules/mocha/bin/_mocha --recursive test/unit"
   },
   "keywords": [
     "war",
