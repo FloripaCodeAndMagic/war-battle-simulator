@@ -1,3 +1,5 @@
+'use strict';
+
 const dice = require('../../../app/scripts/utils/dice');
 const chai = require('chai');
 const sinon = require('sinon');
