@@ -23,7 +23,7 @@ describe('BattleSimulator', () => {
         });
 
         it('should initialize battles as an empty array', () => {
-            const battleSimulator = new BattleSimulator(174, 67, 0);
+            const battleSimulator = new BattleSimulator(174, 67, 1);
 
             battleSimulator.battles.should.be.a('array').with.length(0);
         });
@@ -60,6 +60,25 @@ describe('BattleSimulator', () => {
             battleSimulator.defenders = 4;
             battleSimulator.simulate();
             sinon.assert.calledTwice(battleSimulator._log)
+        });
+    });
+
+    describe('._createBattle', () => {
+        let battleSimulator;
+
+        beforeEach(() => {
+            battleSimulator = new BattleSimulator(10, 3, 1);
+        });
+
+        it('should return an instance of Battle', () => {
+            battleSimulator._createBattle([3, 2, 1], [3, 2, 1]).should.be.instanceof(Battle);
+        });
+
+        it('should return a Battle created with the arguments rolls', () => {
+            const battle = battleSimulator._createBattle([3, 2, 1], [4, 3, 2]);
+
+            battle.attackRoll.should.be.eql([3, 2, 1]);
+            battle.defenseRoll.should.be.eql([4, 3, 2]);
         });
     });
 });

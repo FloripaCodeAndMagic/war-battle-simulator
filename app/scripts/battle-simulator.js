@@ -1,6 +1,7 @@
 'use strict';
 
 const dice = require('./utils/dice');
+const Battle = require('./battle');
 
 function BattleSimulator(attackers, defenders, stopAt) {
     this.attackers = attackers;
